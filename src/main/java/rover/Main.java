@@ -5,22 +5,18 @@ import rover.entity.Grid;
 import rover.entity.Location;
 import rover.entity.Rover;
 import rover.input.Instruction;
-
-import java.awt.*;
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String args) {
         String output = new Main().process(args);
         System.out.println(output);
     }
 
-    public String process(String[] args){
-        Scanner sc = new Scanner(args[0]);
+    public String process(String args){
+        Scanner sc = new Scanner(args);
         StringBuilder sb = new StringBuilder();
         Grid grid = initGrid(sc.nextLine());
         while (sc.hasNext()){
@@ -36,13 +32,12 @@ public class Main {
 
     private Grid initGrid(String lineOne){
         String[] axis = lineOne.split(" ");
-        return new Grid(Integer.valueOf(axis[0]),Integer.valueOf(axis[1]));
+        return new Grid(Integer.parseInt(axis[0]),Integer.parseInt(axis[1]));
     }
 
     private Rover initRover(String lineTwo, Grid grid){
         String[] axis = lineTwo.split(" ");
-        Location location = new Location(Integer.valueOf(axis[0]),Integer.valueOf(axis[1]));
-        String compass = axis[2];
+        Location location = new Location(Integer.parseInt(axis[0]),Integer.parseInt(axis[1]));
         Direction direction = Direction.parseWithInput(axis[2].charAt(0));
                 return new Rover(location, direction, grid);
     }

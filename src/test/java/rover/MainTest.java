@@ -1,14 +1,10 @@
 package rover;
 
-import org.junit.Assert;
-
-import java.util.Arrays;
-
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.*;
 
 class MainTest {
 
-    @org.junit.jupiter.api.Test
+    @Test
     void process() {
         Main main = new Main();
         String input = "5 3\n" +
@@ -18,10 +14,9 @@ class MainTest {
                 "FRRFLLFFRRFLL\n" +
                 "0 3 W\n" +
                 "LLFFFLFLFL";
-        String[] stringArray = {input};
 
-        String output = main.process(stringArray);
-        Assert.assertEquals(output,"1 1 E\n" +
+        String output = main.process(input);
+        Assertions.assertEquals(output,"1 1 E\n" +
                 "3 3 N LOST\n" +
                 "2 3 S\n");
 
