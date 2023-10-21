@@ -1,5 +1,7 @@
 package rover.entity;
 
+import java.util.Arrays;
+
 public enum Direction
 {
     NORTH('N', 0, 1),
@@ -18,11 +20,11 @@ public enum Direction
     }
 
     public Direction rotateLeft(){
-        return values()[(ordinal()-1 %4)];
+        return values()[((ordinal()-1) %4)];
     }
 
     public Direction rotateRight(){
-        return values()[(ordinal()+1 %4)];
+        return values()[((ordinal()+1) %4)];
     }
 
     public char getOrientation() {
@@ -35,6 +37,10 @@ public enum Direction
 
     public int getMoveinY() {
         return moveinY;
+    }
+
+    public static Direction parseWithInput(char val) {
+        return Arrays.stream(values()).filter(i -> i.orientation == val).findFirst().orElseThrow(() -> new IllegalStateException(String.valueOf(val)));
     }
 }
 
