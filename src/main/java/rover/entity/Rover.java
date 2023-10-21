@@ -9,7 +9,7 @@ public class Rover {
     private Direction direction;
     private Location location;
     private Grid grid;
-    boolean lost = false;
+    private boolean lost = false;
 
     public Rover(Location location, Direction direction, Grid grid) {
         this.location = location;
@@ -32,6 +32,22 @@ public class Rover {
         direction = direction.rotateLeft();
     }
 
+    public void rotateRight(){
+        direction = direction.rotateRight();
+    }
+
+    public Boolean onGrid(Location location){
+        return grid.onGrid(location);
+    }
+
+    public void followInstuctions(List<Instruction> instructionList) {
+        for (Instruction instruction : instructionList) {
+            if(!lost){
+                instruction.runCommands(this);
+            }
+        }
+    }
+
     @Override
     public String toString() {
         String finalLocation = "";
@@ -43,22 +59,4 @@ public class Rover {
             return finalLocation;
         }
     }
-
-    public void rotateRight(){
-        direction = direction.rotateRight();
-    }
-
-    public Boolean onGrid(Location location){
-        return grid.onGrid(location);
-    }
-
-    public void followInstuctions(List<Instruction> instructionList) {
-        for (Instruction instruction : instructionList) {
-        if(!lost){
-            instruction.runCommands(this);
-        }
-        }
-    }
-
-
 }

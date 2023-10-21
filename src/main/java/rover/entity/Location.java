@@ -4,8 +4,8 @@ import java.util.Objects;
 
 public class Location {
 
-    private int x;
-    private int y;
+    private final int x;
+    private final int y;
 
     public Location(int x, int y) {
         this.x = x;
@@ -16,17 +16,11 @@ public class Location {
         return x;
     }
 
-    public void setX(int x) {
-        this.x = x;
-    }
 
     public int getY() {
         return y;
     }
 
-    public void setY(int y) {
-        this.y = y;
-    }
 
     public Location updatedLocation(Direction direction){
         return new Location(x + direction.getMoveinX(), y+ direction.getMoveinY());
