@@ -32,6 +32,18 @@ public class Rover {
         direction = direction.rotateLeft();
     }
 
+    @Override
+    public String toString() {
+        String finalLocation = "";
+        finalLocation = finalLocation.concat(location.getX()+" "+ location.getY()+" "+direction.getOrientation());
+        if(lost){
+            return finalLocation.concat(" LOST");
+        }
+        else {
+            return finalLocation;
+        }
+    }
+
     public void rotateRight(){
         direction = direction.rotateRight();
     }

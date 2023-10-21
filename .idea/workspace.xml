@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="246b2295-48dc-49ce-9fe3-3090a81d4b54" name="Changes" comment="initial commit - creating the building blocks for direction, grid, location and a rover class">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rover/input/Instruction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/rover/MainTest.java" afterDir="false" />
+    <list default="true" id="246b2295-48dc-49ce-9fe3-3090a81d4b54" name="Changes" comment="initial commit - added initial test case, main and process, tweaked some previous classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rover/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rover/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rover/entity/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rover/entity/Direction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rover/entity/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rover/entity/Location.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rover/entity/Rover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rover/entity/Rover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rover/input/Instructions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rover/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/rover/MainTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,20 +101,38 @@
       <option name="project" value="LOCAL" />
       <updated>1697893777543</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="initial commit - added initial test case, main and process, tweaked some previous classes">
+      <created>1697919634104</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1697919634104</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit - creating the building blocks for direction, grid, location and a rover class" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit - creating the building blocks for direction, grid, location and a rover class" />
+    <MESSAGE value="initial commit - added initial test case, main and process, tweaked some previous classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit - added initial test case, main and process, tweaked some previous classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/rover/entity/Direction.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/test/java/rover/MainTest.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/rover/Main.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/rover/input/Instruction.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

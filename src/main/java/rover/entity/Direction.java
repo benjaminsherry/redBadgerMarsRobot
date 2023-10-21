@@ -20,7 +20,7 @@ public enum Direction
     }
 
     public Direction rotateLeft(){
-        return values()[((ordinal()-1) %4)];
+        return values()[((ordinal()+3) %4)];
     }
 
     public Direction rotateRight(){
